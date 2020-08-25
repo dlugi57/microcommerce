@@ -5,15 +5,16 @@ import org.springframework.stereotype.Repository;
 
 import java.util.ArrayList;
 import java.util.List;
+/*
 @Repository
 public class ProductDaoImpl implements ProductDao {
 
     public static List<Product> products = new ArrayList<>();
 
     static {
-        products.add(new Product(1, new String("Ordinateur portable"), 350));
-        products.add(new Product(2, new String("Aspirateur Robot"), 500));
-        products.add(new Product(3, new String("Table de Ping Pong"), 750));
+        products.add(new Product(1, new String("Ordinateur portable"), 350, 200));
+        products.add(new Product(2, new String("Aspirateur Robot"), 500, 150));
+        products.add(new Product(3, new String("Table de Ping Pong"), 750, 300));
     }
 
     @Override
@@ -24,7 +25,7 @@ public class ProductDaoImpl implements ProductDao {
     @Override
     public Product findById(int id) {
         for (Product product : products) {
-            if(product.getId() ==id){
+            if (product.getId() == id) {
                 return product;
             }
         }
@@ -37,3 +38,4 @@ public class ProductDaoImpl implements ProductDao {
         return product;
     }
 }
+*/
