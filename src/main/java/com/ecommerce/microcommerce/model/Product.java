@@ -6,6 +6,9 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.validation.constraints.Min;
+
+import org.hibernate.validator.constraints.Length;
 
 //@JsonIgnoreProperties(value = {"prixAchat", "id"})
 
@@ -15,14 +18,18 @@ public class Product {
     @Id
     @GeneratedValue
     private int id;
+
+    @Length(min = 3, max = 20, message = "Nom trop long ou trop court. Et oui messages sont plus stylés que ceux de Spring")
     private String nom;
+
+    @Min(value = 1)
     private int prix;
 
     //a ne pas afficher
     //@JsonIgnore
     private int prixAchat;
 
-    public Product(){
+    public Product() {
 
     }
 
